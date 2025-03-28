@@ -18,7 +18,7 @@ public class MockApi {
 		}
 
 		public virtual String generateResponseBody(HttpRequest request) {
-			// By default, will return an empty JSON object, regardless of the HttpRequest
+			// Note: If not set, this class will return an empty JSON body
 			return this.body ?? '{}';
 		}
 
@@ -43,8 +43,8 @@ public class MockApi {
 			this.body = body;
 			return this;
 		}
-
-		public virtual MockApi.Response withBody(Object bodyObj) {
+		
+		public MockApi.Response withBody(Object bodyObj) {
 			return this.withBody(JSON.serialize(bodyObj));
 		}
 

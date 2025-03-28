@@ -1,12 +1,19 @@
 {
 	"packageDirectories": [
 		{
+			"versionName": "ver 1.0.0",
+			"versionNumber": "1.0.0.NEXT",
 			"path": "force-app",
-			"default": true
+			"default": true,
+			"package": "apex-mock-api",
+			"versionDescription": "A simple, flexible System.HttpCalloutMock framework for Salesforce"
 		}
 	],
 	"name": "apex-mock-api",
 	"namespace": "",
 	"sfdcLoginUrl": "https://login.salesforce.com",
-	"sourceApiVersion": "63.0"
+	"sourceApiVersion": "63.0",
+	"packageAliases": {
+		"apex-mock-api": "0HoDn0000010wCTKAY"
+	}
 }
