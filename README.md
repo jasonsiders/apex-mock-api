@@ -24,7 +24,7 @@ You can easily customize your responses, either by using the base `MockApi.Respo
 
 Most simple responses can be implemented with just a couple of lines of code.
 
-<detail>
+<details>
     <summary><h4>Example: Simple Response</h4></summary>
 
 ```java
@@ -44,11 +44,11 @@ static void shouldReturnBasicSuccessResponse() {
 }
 ```
 
-</detail>
+</details>
 
 You can add specific details, like a status code, headers, or return body using the `MockApi.Request`'s builder methods:
 
-<detail>
+<details>
     <summary><h4>Example: Simple Response w/Custom Return Values</h4></summary>
 
 ```java
@@ -73,9 +73,9 @@ static void shouldReturnResponseWithCustomValues() {
 }
 ```
 
-</detail>
+</details>
 
-<detail>
+<details>
     <summary><h4>Example: Simulate Callout Exceptions</h4></summary>
 
 ```java
@@ -94,13 +94,13 @@ static void shouldThrowError() {
 }
 ```
 
-</detail>
+</details>
 
 ### Custom Response Logic
 
 For more complex processing logic, you can extend the `MockApi.Response` class and its methods to accurately simulate a certain API's behavior:
 
-<detail>
+<details>
     <summary><h4>Example: Extending the <code>MockApi.Response</code></h4></summary>
 
 ```java
@@ -131,4 +131,4 @@ private class CustomResponse extends MockApi.Response {
 }
 ```
 
-</detail>
+</details>
