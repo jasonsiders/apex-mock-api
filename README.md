@@ -75,6 +75,8 @@ static void shouldReturnResponseWithCustomValues() {
 
 </details>
 
+You can even inject `System.CalloutException`, or other exceptions to be thrown as a result of your callouts:
+
 <details>
     <summary><b>Example: Simulate Callout Exceptions</b></summary>
 
