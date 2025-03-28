@@ -2,7 +2,7 @@
 private class MockApiTest {
 	@IsTest
 	static void shouldReturnBasicSuccessResponse() {
-		MockApi.Response mockResponse = new MockApi.Response();
+		MockApi.Response responseBuilder = new MockApi.Response();
 		HttpRequest request = MockApiTest.initRequest();
 
 		Test.startTest();
@@ -18,7 +18,7 @@ private class MockApiTest {
 	@IsTest
 	static void shouldReturnResponseWithCustomStatusCode() {
 		Integer statusCode = 400;
-		MockApi.Response mockResponse = new MockApi.Response()?.withStatusCode(statusCode);
+		MockApi.Response responseBuilder = new MockApi.Response()?.withStatusCode(statusCode);
 		HttpRequest request = MockApiTest.initRequest();
 
 		Test.startTest();
@@ -31,7 +31,7 @@ private class MockApiTest {
 	@IsTest
 	static void shouldReturnResponseWithCustomResponseBody() {
 		Map<String, Object> params = new Map<String, Object>{ 'foo' => 'bar' };
-		MockApi.Response mockResponse = new MockApi.Response()?.withBody(params);
+		MockApi.Response responseBuilder = new MockApi.Response()?.withBody(params);
 		HttpRequest request = MockApiTest.initRequest();
 
 		Test.startTest();
@@ -48,7 +48,7 @@ private class MockApiTest {
 
 	@IsTest
 	static void shouldReturnResponseWithCustomResponseHeaders() {
-		MockApi.Response mockResponse = new MockApi.Response()?.withHeader('Content-Type', 'application/json');
+		MockApi.Response responseBuilder = new MockApi.Response()?.withHeader('Content-Type', 'application/json');
 		HttpRequest request = MockApiTest.initRequest();
 
 		Test.startTest();
@@ -61,7 +61,7 @@ private class MockApiTest {
 	@SuppressWarnings('PMD.EmptyCatchBlock')
 	@IsTest
 	static void shouldThrowError() {
-		MockApi.Response mockResponse = new MockApi.Response()?.withError();
+		MockApi.Response responseBuilder = new MockApi.Response()?.withError();
 		HttpRequest request = MockApiTest.initRequest();
 
 		Test.startTest();
@@ -111,7 +111,7 @@ private class MockApiTest {
 	// **** INNER **** //
 	private class CustomResponse extends MockApi.Response {
 		/**
-		 * This custom implementation simuhlates custom api logic
+		 * This custom implementation simulates custom api logic
 		 * This example fails any requests w/out an Authorization header/Bearer token
 		 * Something that a real API might actually do!
 		 **/
